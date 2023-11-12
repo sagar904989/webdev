@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+    type="image/png"
+    href="https://png.pngtree.com/png-clipart/20221019/original/pngtree-diwali-diya-icon-design-png-image_8704938.png">
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color:rgb(15, 15, 15) ;
+            
+        }
+        .lamp1{
+            padding-top: 10px ;
+            padding-left: 50px;
+        }
+        .bg{
+           height: 100vh;
+            width: 100%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            padding-top: 20px;
+            background-image: url('https://pixelify.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2020/06/20112726/runnerdesign_2020-3.jpg');
+            background-size:100%;
+            background-repeat: no-repeat;
+        
+
+            background-position: 50% 10%;
+        }
+        .greeting{
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+            height: 70px;
+        }
+        .wishes{
+            font-size: 50px;
+            font-family: arial black;
+            color: white;
+            -webkit-text-stroke: 2px rgb(0, 255, 0);
+            text-shadow: 0px 0px 10px rgb(132, 0, 255);
+        }
+        .wish_line{
+            padding-top: 10px ;
+            padding-left: 50px;
+            background-repeat: no-repeat;
+            font-variant:small-caps;
+            font-family: sans-serif;
+            font-weight: 800;
+            color: rgb(196, 121, 22);
+            text-justify: auto;
+        }
+        .lamp1{
+            width: 200px;
+        }
+       
+        
+           </style>
+    <title>HAPPY DIWALI</title>
+</head>
+    <body>
+
+        <div class="bg">
+            <div class="wish" >
+                
+               
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="wish_line" style="font-size: xx-large; align-content: center ; font-family: Arial, Helvetica, sans-serif;">
+                            <p>               
+                              <span>  "Wishing you a Shubh Diwali filled with <br> good fortune,  health, wealth, and the<br> joy of family."<br> "May the diyas light up your life and</br> the rangoli brighten your days with<br> prosperity.</br> Happy Diwali!!!"</p>
+                              </span>   
+                            </div>
+                    </td>
+                    <td>
+                        <div class="lamp1">
+                            <img src="C:\Users\admin\Downloads\lamps-removebg-preview.png" alt="lamp/png">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+           
+            
+                
+            <div class="greeting">
+                <marquee scrollamount="30">
+                    <span class="wishes" id="wish"></span>
+                </marquee>
+          
+        </div>
+        <!-- <script>
+            let name=(prompt("Enter your Good Name :")).toUpperCase();
+            let spn = document.getElementById("wish");
+            let text = `HAPPY DIWALI ${name} FROM SAGAR`;
+            spn.innerHTML=text;
+
+            speech = new SpeechSynthesisUtterance();
+            speech.text=text;
+            speechSynthesis.speak(speech);
+            </script> -->
+
+            <script>
+                let name = (prompt("Enter your Good Name: ")).toUpperCase();
+                let spn = document.getElementById("wish");
+                let text = `HAPPY DIWALI ${name} FROM SAGAR ...!`;
+                spn.innerHTML = text ;
+        
+                let speech = new SpeechSynthesisUtterance() ; 
+                let voices = speechSynthesis.getVoices();
+                speech.voice = voices[0];
+                function demo(){
+                    speech.text = text ;
+                    voices = speechSynthesis.getVoices();
+                    speech.voice = voices[0];
+                speechSynthesis.speak(speech) ;
+                }
+                setTimeout(demo,1500);
+            </script>
+    </body>
+</html>
